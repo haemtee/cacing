@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Song Downloader</h1>
+    <input type="text" id="songInput" placeholder="Enter song name or URL">
+    <button onclick="downloadSong()">Download</button>
+    <div id="result"></div>
+
+    <script>
+        function downloadSong() {
+            const input = document.getElementById('songInput').value;
+            const result = document.getElementById('result');
+            result.textContent = 'Downloading: ' + input;
+        }
+    </script>
+</body>
+
+</html>
